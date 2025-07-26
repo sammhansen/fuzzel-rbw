@@ -9,6 +9,10 @@
     <a href="https://github.com/sammhansen/fuzzel-rbw/contributors"><img src="https://img.shields.io/github/contributors/sammhansen/fuzzel-rbw?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 
+<p align="center">
+    🦀 frbw —  a minimal and fast Rust-powered tool that brings the power of Bitwarden to your Wayland desktop using rbw and fuzzel.  With a single keybind, you can search, select, and type credentials from your secure vault — all without leaving the keyboard.
+</p>
+
 # Installation
 ## Build from source
 ### Prequisites
