@@ -1,4 +1,3 @@
-// use crate::fuzzel;
 use crate::insert;
 use std::process::Command;
 
@@ -11,7 +10,6 @@ pub fn unlock() {
     if !unlock.status.success() {
         println!("{}", String::from_utf8_lossy(&unlock.stderr));
     } else {
-        // fuzzel::fetch();
         insert::main();
     };
 }

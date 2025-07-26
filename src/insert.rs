@@ -1,16 +1,6 @@
 use crate::fuzzel;
 use std::process::{Command, Stdio};
 
-pub fn main() {
-    let json = fuzzel::fetch();
-
-    let username = json.username;
-    let password = json.password;
-    let _totp = json.totp;
-
-    autotype(username, password);
-}
-
 pub fn autotype(username: String, password: String) {
     let sequence = format!("{username}\t{password}");
 
@@ -25,4 +15,14 @@ pub fn autotype(username: String, password: String) {
     if !status.success() {
         eprintln!("{status}");
     }
+}
+
+pub fn main() {
+    let json = fuzzel::fetch();
+
+    let username = json.username;
+    let password = json.password;
+    let _totp = json.totp;
+
+    autotype(username, password);
 }
