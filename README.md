@@ -16,7 +16,7 @@
 # Installation
 ## Build from source
 ### Prequisites
-- You need rust installed
+- You need rust - <a href="https://www.rust-lang.org/tools/install">install rust</a>
   
 - Clone this repo
   ```
