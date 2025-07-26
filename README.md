@@ -1,3 +1,14 @@
+<h3 align="center">
+    <img src="https://raw.githubusercontent.com/sammhansen/fuzzel-rbw/unstable/.assets/logos/bitwarden.svg" width="100" alt="Logo"/><br/>
+    Fuzzel RBW
+</h3>
+
+<p align="center">
+    <a href="https://github.com/sammhansen/fuzzel-rbw/stargazers"><img src="https://img.shields.io/github/stars/sammhansen/fuzzel-rbw?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
+    <a href="https://github.com/sammhansen/fuzzel-rbw/issues"><img src="https://img.shields.io/github/issues/sammhansen/fuzzel-rbw?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
+    <a href="https://github.com/sammhansen/fuzzel-rbw/contributors"><img src="https://img.shields.io/github/contributors/sammhansen/fuzzel-rbw?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
+</p>
+
 # Installation
 ## Build from source
 ### Prequisites
