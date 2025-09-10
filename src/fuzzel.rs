@@ -1,6 +1,7 @@
 use crate::rbw;
 use crate::structs::entry::Entry;
 use crate::utils::json::to_json;
+use std::process;
 use std::{
     io::{Read, Write},
     process::{Command, Stdio},
@@ -11,7 +12,7 @@ pub fn spawn() -> (String, String) {
     let list_clone = list.clone();
 
     let mut child = Command::new("fuzzel")
-        .args(["--dmenu", "--placeholder", "> helloow"])
+        .args(["--dmenu", "--placeholder", "choose an entry"])
         .stdin(Stdio::piped())
         .stdout(Stdio::piped())
         .spawn()
@@ -31,7 +32,11 @@ pub fn spawn() -> (String, String) {
     let choice_raw = String::from_utf8_lossy(&child_out.stdout);
     let choice = choice_raw.trim();
 
-    (choice.to_string(), list)
+    if choice == "" {
+        process::exit(1);
+    } else {
+        (choice.to_string(), list)
+    }
 }
 
 // handle cases where an entry name appears twice
