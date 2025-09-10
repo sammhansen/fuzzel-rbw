@@ -14,6 +14,14 @@
 </p>
 
 # Installation
+## AUR
+  ```
+  paru -S fuzzel-rbw
+  ```
+  alternatively if you use yay
+  ```
+  yay -S fuzzel-rbw
+  ```
 ## Build from source
 ### Prequisites
 - You need rust - <a href="https://www.rust-lang.org/tools/install">install rust</a>
