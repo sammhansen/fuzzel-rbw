@@ -39,4 +39,8 @@
   ```
   sudo cp target/release/frbw /usr/bin/
   ```
+- Copy the assets to `/usr/share/fuzzel-rbw` 
+  ```
+  sudo mkdir -p /usr/share/fuzzel-rbw/assets && sudo cp -r .assets/* /usr/share/fuzzel-rbw/assets/
+  ```
   
