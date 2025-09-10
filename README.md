@@ -33,7 +33,7 @@
   ```
 - Build
   ```
-  cargo build --release
+  cargo build --release --locked
   ```
 - Copy the binary to `/usr/bin/`
   ```
