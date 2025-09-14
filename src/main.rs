@@ -1,5 +1,6 @@
 mod checks;
-mod constants;
+mod config;
+mod fuzzel;
 mod rbw;
 mod utils;
 
@@ -36,7 +37,7 @@ fn main() {
 
     match cli.command {
         Commands::Show => {
-            vault::unlock();
+            vault::rbw_unlock();
         }
         Commands::Health => {
             health::requirements();
