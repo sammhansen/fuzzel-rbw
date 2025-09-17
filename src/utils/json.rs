@@ -1,12 +1,19 @@
+use serde_json::Error;
+use std::fs::File;
+use std::io::{BufReader, Seek, SeekFrom};
+
+use crate::config::default::UserConfig;
 use serde_json;
 
-use crate::structs::entry::Entry;
+// reads the config file and deserializes from json against UserConfig
+pub fn from_json_file(config_file: &mut File) -> Result<UserConfig, Error> {
+    // resets the position of the cursor to 0
+    // during the first run when the config file is created, the cursor position is left at the end.
+    // this prevents getting an EOF error
+    let _ = config_file.seek(SeekFrom::Start(0));
 
-pub fn to_json(unprocessed: String) -> Entry {
-    let processed: serde_json::Value = serde_json::from_str(&unprocessed).unwrap();
-    let data = &processed["data"];
+    let reader = BufReader::new(config_file);
+    let user_config = serde_json::from_reader(reader)?;
 
-    let json: Entry = serde_json::from_value(data.clone()).unwrap();
-
-    json
+    Ok(user_config)
 }

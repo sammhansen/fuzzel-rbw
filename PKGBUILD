@@ -23,4 +23,3 @@ package() {
   cp -r "$srcdir/fuzzel-rbw-$pkgver/.assets/"* \
         "$pkgdir/usr/share/fuzzel-rbw/assets/"
 }
-

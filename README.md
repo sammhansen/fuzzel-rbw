@@ -1,5 +1,5 @@
 <h3 align="center">
-    <img src="https://raw.githubusercontent.com/sammhansen/fuzzel-rbw/unstable/.assets/logos/bitwarden.svg" width="100" alt="Logo"/><br/>
+    <img src="https://raw.githubusercontent.com/sammhansen/fuzzel-rbw/develop/.assets/bitwarden.png" width="100" alt="Logo"/><br/>
     Fuzzel RBW
 </h3>
 
@@ -10,8 +10,23 @@
 </p>
 
 <p align="center">
-    🦀 frbw —  a minimal and fast Rust-powered tool that brings the power of Bitwarden to your Wayland desktop using <a href="https://github.com/doy/rbw">RBW</a> and <a href="https://codeberg.org/dnkl/fuzzel">Fuzzel</a>.  With a single keybind, you can search, select, and type credentials from your secure vault — all without leaving the keyboard.
+    🦀 frbw —  a minimal rust-powered tool that brings the power of Bitwarden to your Wayland desktop using <a href="https://github.com/doy/rbw">rbw</a> and <a href="https://codeberg.org/dnkl/fuzzel">fuzzel</a>.
 </p>
+
+# Configuration
+- Fuzzel RBW currently supports a custom
+   - prompt: shows just before the placeholder, default `> `
+   - placeholder: self explanatory, default `select an entry`
+   - lines: number of vertical lines for fuzzel to display, default `6`
+     
+- The file is expected to be at `$HOME/.config/fuzzel-rbw/config.json` and will be automatically generated if it does not exist
+```
+{
+  "placeholder": "select an entry",
+  "prompt": "> ",
+  "lines": 6
+}
+```
 
 # Installation
 ## AUR
@@ -39,8 +54,8 @@
   ```
   sudo cp target/release/frbw /usr/bin/
   ```
-- Copy the assets to `/usr/share/fuzzel-rbw` 
+- Copy the logo to `/usr/share/pixmaps` 
   ```
-  sudo mkdir -p /usr/share/fuzzel-rbw/assets && sudo cp -r .assets/* /usr/share/fuzzel-rbw/assets/
+  sudo cp .assets/bitwarden.png /usr/share/pixmaps/bitwarden.png
   ```
   
