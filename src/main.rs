@@ -1,16 +1,17 @@
 mod checks;
+mod command;
 mod config;
 mod fuzzel;
 mod rbw;
 mod utils;
 
+use std::io::Error;
+
 use clap::Parser;
 use clap::Subcommand;
 
 use crate::checks::health;
-use crate::rbw::vault;
-
-// use crate::checks::health;
+use crate::rbw::unlock;
 
 #[derive(Subcommand, Debug)]
 enum Commands {
@@ -32,15 +33,17 @@ struct Cli {
     command: Commands,
 }
 
-fn main() {
+fn main() -> Result<(), Error> {
     let cli = Cli::parse();
 
     match cli.command {
         Commands::Show => {
-            vault::rbw_unlock();
+            unlock::run()?;
         }
         Commands::Health => {
-            health::requirements();
+            health::dependencies()?;
         }
     }
+
+    Ok(())
 }
