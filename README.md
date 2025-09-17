@@ -14,7 +14,11 @@
 </p>
 
 # Configuration
-- Fuzzel RBW currently supports changing the prompt,placeholder and number of lines to be passed as arguments to fuzzel --dmenu
+- Fuzzel RBW currently supports a custom
+   - prompt: shows just before the placeholder, default `> `
+   - placeholder: self explanatory, default `select an entry`
+   - lines: number of vertical lines for fuzzel to display, default `6`
+     
 - The file is expected to be at `$HOME/.config/fuzzel-rbw/config.json` and will be automatically generated on the first run
 ```
 {
@@ -50,8 +54,8 @@
   ```
   sudo cp target/release/frbw /usr/bin/
   ```
-- Copy the assets to `/usr/share/fuzzel-rbw` 
+- Copy the logo to `/usr/share/pixmaps` 
   ```
-  sudo mkdir -p /usr/share/fuzzel-rbw/assets && sudo cp -r .assets/* /usr/share/fuzzel-rbw/assets/
+  sudo cp .assets/bitwarden.png /usr/share/pixmaps/bitwarden.png
   ```
   
