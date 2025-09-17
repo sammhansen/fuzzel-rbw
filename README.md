@@ -13,6 +13,17 @@
     🦀 frbw —  a minimal and fast Rust-powered tool that brings the power of Bitwarden to your Wayland desktop using <a href="https://github.com/doy/rbw">RBW</a> and <a href="https://codeberg.org/dnkl/fuzzel">Fuzzel</a>.  With a single keybind, you can search, select, and type credentials from your secure vault — all without leaving the keyboard.
 </p>
 
+# Configuration
+- Fuzzel RBW currently supports changing the prompt,placeholder and number of lines to be passed as arguments to fuzzel --dmenu
+- The file is expected to be at `$HOME/.config/fuzzel-rbw/config.json` and will be automatically generated on the first run
+```
+{
+  "placeholder": "select an entry",
+  "prompt": "> ",
+  "lines": 6
+}
+```
+
 # Installation
 ## AUR
   ```
