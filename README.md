@@ -1,5 +1,5 @@
 <h3 align="center">
-    <img src="https://raw.githubusercontent.com/sammhansen/fuzzel-rbw/unstable/.assets/logos/bitwarden.svg" width="100" alt="Logo"/><br/>
+    <img src="https://raw.githubusercontent.com/sammhansen/fuzzel-rbw/unstable/.assets/bitwarden.png" width="100" alt="Logo"/><br/>
     Fuzzel RBW
 </h3>
 
