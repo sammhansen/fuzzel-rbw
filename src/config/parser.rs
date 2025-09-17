@@ -2,7 +2,6 @@ use std::fs::File;
 use std::io::Error;
 use std::io::ErrorKind;
 use std::path::PathBuf;
-use std::process;
 
 use crate::config;
 use crate::config::default;
@@ -27,21 +26,11 @@ fn check_config_file_existence(path: PathBuf) -> Result<File, Error> {
 }
 
 // parse the config file , return UserConfig if Ok
-pub fn parse_config_file() -> Result<UserConfig, Error> {
+pub fn parse_config_file() -> anyhow::Result<UserConfig> {
     let config_dir: PathBuf = config::path::expand_path(config::constants::CONFIG_DIR);
 
-    let config_file = check_config_file_existence(config_dir);
+    let mut file = check_config_file_existence(config_dir)?;
+    let user_config = json::from_json_file(&mut file)?;
 
-    match config_file {
-        Ok(mut file) => match json::from_json::read_json_from_config_file(&mut file) {
-            Ok(user_config) => Ok(user_config),
-            Err(err) => {
-                eprintln!("parse_config_file(): {err}");
-                process::exit(1);
-            }
-        },
-        Err(err) => match err.kind() {
-            _ => Err(err),
-        },
-    }
+    Ok(user_config)
 }
