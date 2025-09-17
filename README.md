@@ -19,7 +19,7 @@
    - placeholder: self explanatory, default `select an entry`
    - lines: number of vertical lines for fuzzel to display, default `6`
      
-- The file is expected to be at `$HOME/.config/fuzzel-rbw/config.json` and will be automatically generated on the first run
+- The file is expected to be at `$HOME/.config/fuzzel-rbw/config.json` and will be automatically generated if it does not exist
 ```
 {
   "placeholder": "select an entry",
