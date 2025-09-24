@@ -12,3 +12,9 @@ serde_json = "1.0.143"
 [[bin]]
 name = "frbw"
 path = "src/main.rs"
+
+[workspace]
+members = [
+	".",
+	"pinentry-fuzzel",
+]
