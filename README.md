@@ -34,8 +34,10 @@
   {
     "pinentry": "pinentry-fuzzel"
   }
-> [!WARNING]
-> Before using pinentry-fuzzel, please take your time to understand why pinentry exists in the first place and the risks involved. Pinentry-fuzzel only aims to make things more convenient and does not provide the security that comes with traditional pinentry clients
+
+  ```
+  > [!WARNING]
+  > Before using pinentry-fuzzel, please take your time to understand why pinentry exists in the first place and the risks involved. Pinentry-fuzzel only aims to make things more convenient and does not provide the security that comes with traditional pinentry clients
 
 # Installation
 ## AUR
