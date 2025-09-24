@@ -1,6 +1,6 @@
 [package]
 name = "fuzzel-rbw"
-version = "0.1.0"
+version = "0.1.2"
 edition = "2024"
 
 [dependencies]
@@ -12,3 +12,9 @@ serde_json = "1.0.143"
 [[bin]]
 name = "frbw"
 path = "src/main.rs"
+
+[workspace]
+members = [
+	".",
+	"pinentry-fuzzel",
+]

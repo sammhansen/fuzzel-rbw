@@ -27,6 +27,19 @@
   "lines": 6
 }
 ```
+# Pinentry
+- RBW allows you to specify the pinentry binary to use. Fuzzel RBW comes with `pinentry-fuzzel`. To use it add the block below to `~/.config/rbw/config.json`
+  <br>
+  ```json
+  {
+    "pinentry": "pinentry-fuzzel"
+  }
+
+> [!NOTE]
+> Currently pinentry-fuzzel only supports `GETPIN`
+  
+> [!WARNING]
+> Before using pinentry-fuzzel, please take your time to understand why pinentry exists in the first place and the risks involved. Pinentry-fuzzel only aims to make things more convenient and does not provide the security that comes with traditional pinentry clients
 
 # Installation
 ## AUR

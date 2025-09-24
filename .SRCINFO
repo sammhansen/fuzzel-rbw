@@ -1,0 +1,13 @@
+pkgbase = fuzzel-rbw
+	pkgdesc = A simple Bitwarden RBW frontend for Fuzzel
+	pkgver = 0.1.1
+	pkgrel = 2
+	url = https://github.com/sammhansen/fuzzel-rbw
+	arch = x86_64
+	license = MIT
+	source = https://github.com/sammhansen/fuzzel-rbw/releases/download/v0.1.1/frbw
+	source = fuzzel-rbw-0.1.1.tar.gz::https://github.com/sammhansen/fuzzel-rbw/archive/refs/tags/v0.1.1.tar.gz
+	sha256sums = 878477ec924a1cc9fa3f7f6de6a1be3ec317c513b972fd7aedacf5504618a12f
+	sha256sums = 7dc33652b3f4f75f55399d205243febe98b8748fcb0a60a544cf5f77c04a6022
+
+pkgname = fuzzel-rbw
