@@ -28,8 +28,12 @@
 }
 ```
 # Pinentry
-- RBW allows you to specify the pinentry program to use. Fuzzel RBW comes with pinentry-fuzzel. To use it add `"pinentry": "pinentry-fuzzel"` to `~/.config/rbw/config.json`
+- RBW allows you to specify the pinentry program to use. Fuzzel RBW comes with pinentry-fuzzel. To use it add the block below to `~/.config/rbw/config.json`
   <br>
+  ```json
+  {
+    "pinentry": "pinentry-fuzzel"
+  }
 > [!WARNING]
 > Before using pinentry-fuzzel, please take your time to understand why pinentry exists in the first place and the risks involved. Pinentry-fuzzel only aims to make things more convenient and does not provide the security that comes with traditional pinentry clients
 
