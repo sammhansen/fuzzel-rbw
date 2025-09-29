@@ -1,8 +1,11 @@
 use std::{io::Error, process::Command};
 
-// uses wtype to type in the user and pass
+// keys in a sequence of the username,tab,password then return
+// this fixes some incognito tabs failing to work because \t and \n are actual simulated keypresses
 pub fn key_in(user: String, pass: String) -> Result<(), Error> {
-    let args = format!("{}\t{}", user.trim(), pass.trim());
-    Command::new("wtype").arg(args).output()?;
+    Command::new("wtype").arg(user.trim()).status()?;
+    Command::new("wtype").args(["-k", "Tab"]).status()?;
+    Command::new("wtype").arg(pass.trim()).status()?;
+    Command::new("wtype").args(["-k", "Return"]).status()?;
     Ok(())
 }
