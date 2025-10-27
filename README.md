@@ -69,6 +69,10 @@
   ```
   sudo cp target/release/frbw /usr/bin/
   ```
+- Copy the `pinentry-fuzzel` binary to `/usr/bin/`
+  ```
+  sudo cp target/release/pinentry-fuzzel /usr/bin/
+  ```
 - Copy the logo to `/usr/share/pixmaps` 
   ```
   sudo cp .assets/bitwarden.png /usr/share/pixmaps/bitwarden.png
