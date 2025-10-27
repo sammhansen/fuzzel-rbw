@@ -12,6 +12,7 @@ pub struct UserConfig {
     pub placeholder: String,
     pub prompt: String,
     pub lines: u8,
+    pub notifications: bool,
 }
 
 // creates the config file if it does not exist and writes the default config file to it
@@ -33,6 +34,7 @@ pub fn create_config_file(path: PathBuf) -> Result<File, Error> {
         placeholder: "select an entry".to_owned(),
         prompt: "> ".to_owned(),
         lines: 6,
+        notifications: true,
     };
 
     // write to the config file with indentation
