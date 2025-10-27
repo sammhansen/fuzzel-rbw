@@ -18,7 +18,7 @@
    - `prompt`: shows just before the placeholder, default `> `
    - `placeholder`: self explanatory, default `select an entry`
    - `lines`: number of vertical lines for fuzzel to display, default `6`
-   - `notifications`: whether to send notifications via notify-send, default `true`
+   - `notifications`: whether to send notifications via `notify-send`, default `true`
      
 - The file is expected to be at `$HOME/.config/fuzzel-rbw/config.json` and will be automatically generated if it does not exist
 ```
